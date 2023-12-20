@@ -1,0 +1,20 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>${LOG_LEVEL:-INFO}</level>
+    </filter>
+      <encoder>
+        <pattern>%cyan(%date) [%yellow(%-36X{X-Correlation-ID})] %highlight(%-5level) %logger: %message%n%xException{10}
+        </pattern>
+      </encoder>
+  </appender>
+
+  <logger name="org.http4s" level="${LOG_HTTP4S_LEVEL:-INFO}"/>
+  <logger name="com.zaxxer.hikari" level="DEBUG"/>
+
+  <root level="DEBUG">
+    <appender-ref ref="STDOUT"/>
+  </root>
+
+</configuration>

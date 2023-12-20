@@ -1,0 +1,14 @@
+/.bsp/
+target/
+/.idea
+/.metals
+/.vscode
+/.bsp
+/.idea_modules
+/.classpath
+/.gradle
+/.project
+/.settings
+/RUNNING_PID
+/.bloop
+*.tgz
