@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS Book (
-  id UUID PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS book (
+  id varchar(255) PRIMARY KEY,
   title varchar(255) NOT NULL,
   author varchar(255) NOT NULL
 )

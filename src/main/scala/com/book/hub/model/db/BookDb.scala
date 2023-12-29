@@ -7,7 +7,7 @@ import io.circe.Decoder
 import io.circe.Encoder
 
 final case class BookDb(
-    id: BookId,
+    id: String,
     title: String,
     author: String
 )
