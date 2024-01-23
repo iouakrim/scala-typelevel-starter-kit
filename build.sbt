@@ -12,3 +12,4 @@ lazy val root = (project in file("."))
     reStart / envVars   := RunVars.vars,
     libraryDependencies ++= Dependencies.common ++ Dependencies.logging
   )
+addCompilerPlugin("com.softwaremill.macwire" %% "macros" % "2.3.7" % "provided")

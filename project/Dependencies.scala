@@ -12,6 +12,7 @@ object Dependencies {
     val doobie     = "1.0.0-RC4"
     val flyway     = "9.22.3"
     val chimney    = "0.8.4"
+    val macwire    = "2.5.9"
 
   }
 
@@ -33,6 +34,9 @@ object Dependencies {
     lazy val doobiePostgres       = "org.tpolecat"          %% "doobie-postgres"        % Versions.doobie
     lazy val flyway               = "org.flywaydb"           % "flyway-core"            % Versions.flyway
     lazy val chimney              = "io.scalaland"          %% "chimney"                % Versions.chimney
+    lazy val macwireMacros = "com.softwaremill.macwire" %% "macros" % Versions.macwire % "provided"
+    lazy val macwireUtil   = "com.softwaremill.macwire" %% "util"   % Versions.macwire
+
   }
 
   import Compile._
@@ -51,7 +55,9 @@ object Dependencies {
     doobieHikari,
     doobiePostgres,
     flyway,
-    chimney
+    chimney,
+    macwireMacros,
+    macwireUtil
   )
 
 }
